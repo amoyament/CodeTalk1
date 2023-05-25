@@ -1,5 +1,6 @@
-// Calls and displays the new array in a table format
+// Calls and displays the new array in a table format and gives the array it's size
 console.table(createArray(100));
+// We can play with the size to see the difference in size and time it take to create the array
 
 // This function creates an array of random numbers up to a specified "size"
 function createArray(size) {
@@ -15,11 +16,14 @@ function createArray(size) {
     array.push(Math.floor(Math.random() * 100) + 1);
   }
   // Tells user in console and gives the amount of time it took to make the array
-  // Divides by 1000 to convert to milliseconds
-  // console.log(`creating array: ${new Date()} - ${start}`);
+  // Divides by 1000 to convert to milliseconds (but let's look at milliseconds...)
   console.log("creating array:", (new Date() - start) / 1000);
+  // Can be displayed in templaate literal to see actual dates and times
+  // console.log(`creating array: ${start} - ${new Date()}`);
   return array;
 }
+
+// Examples of how console.table() works with different datatypes
 
 // As an object:
 // const person = {
@@ -29,7 +33,7 @@ function createArray(size) {
 // };
 
 // console.table(person);
-// // Note that not all browsers or JavaScript environments support the console.table() function. If it is not supported, calling console.table() will output a simple text representation of the data instead of a table.
+// Not all browsers or JavaScript environments support the console.table() function
 
 // const randomArray = [42, 17, 9, 81, 33, 55, 27, 68, 91, 12];
 // console.table(randomArray);
